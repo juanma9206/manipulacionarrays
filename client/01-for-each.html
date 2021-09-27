@@ -11,7 +11,7 @@
     <script>
         const products = [
             { title: 'Burger', price: 8},
-            { title: 'Pizza', price: 17},
+            { title: 'Pizza', price: 16},
         ];
 
         const app = document.getElementById('app');
@@ -19,6 +19,24 @@
 
             app.innerHTML += `<li> ${product.title} : ${product.price} </li>`;
         }) 
+    
     </script>
+    
+    <div id="tareas"></div>
+    <script>
+        const task = [
+            { title: 'Hacer un array de tareas', status: true},
+            { title: 'Codificar el array', status: true },
+            { title: 'Ver el siguiente video del curso', status: false },
+        ];
+
+        const tareas = document.getElementById('tareas');
+        task.forEach(element => {
+    
+            tareas.innerHTML += `<li> ${element.title} : <input type="checkbox" ${element.status && 'checked'}/> </li>`;
+        }) 
+    </script>
+    
+
 </body>
 </html>
